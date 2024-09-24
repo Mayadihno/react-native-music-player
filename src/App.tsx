@@ -3,11 +3,11 @@ import {
   SafeAreaView,
   StatusBar,
   StyleSheet,
-  Text,
   View,
 } from 'react-native';
 import React, {useEffect, useState} from 'react';
 import {addTrack, setupPlayer} from '../musicPlayerService';
+import MusicPlayer from './components/screens/MusicPlayer';
 
 const App = () => {
   const [isPlayerReady, setIsPlayerReady] = useState(false);
@@ -37,7 +37,7 @@ const App = () => {
   return (
     <View style={styles.container}>
       <StatusBar barStyle={'light-content'} />
-      <Text>Track player App</Text>
+      <MusicPlayer />
     </View>
   );
 };
